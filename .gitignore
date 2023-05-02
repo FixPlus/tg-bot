@@ -1,2 +1,5 @@
 .idea
 token.txt
+quiz_scoreboard.db
+user_phrase_base.db
+repository/__pycache__/

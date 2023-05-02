@@ -53,6 +53,13 @@ class AbstractRepository(ABC, Generic[T]):
         """
 
     @abstractmethod
+    def get_first_ordered(self, ordered_by : str, n : int, decsending : bool = False) -> list[T]:
+        """
+        Получить первые n записей, отсортированных по полю ordered_by
+        в порядке возрастания, если descending = False, или в порядке убывания,
+        если descending = True
+        """
+    @abstractmethod
     def update(self, obj: T) -> None:
         """ Обновить данные об объекте. Объект должен содержать поле pk. """
 
